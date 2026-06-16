@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐍 贪吃蛇游戏</h1>
+            <div class="info-bar">
+                <div class="info-item">
+                    <span class="label">分数:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">速度:</span>
+                    <span class="value" id="speed">1.0x</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">时间:</span>
+                    <span class="value" id="time">0s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <div class="controls">
+            <p><strong>控制方式:</strong></p>
+            <p>← <strong>A</strong> 键 | 右 <strong>D</strong> 键 →</p>
+            <p>向上自动移动</p>
+        </div>
+
+        <div class="button-area">
+            <button id="startBtn" class="btn btn-primary">开始游戏</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>暂停</button>
+            <button id="resetBtn" class="btn btn-danger">重置游戏</button>
+        </div>
+
+        <div class="game-status" id="gameStatus"></div>
+
+        <div class="instructions">
+            <h3>游戏说明:</h3>
+            <ul>
+                <li>🐍 贪吃蛇自动向上移动</li>
+                <li>⌨️ 按 <strong>A</strong> 键向左转，按 <strong>D</strong> 键向右转</li>
+                <li>🍎 吃掉食物可以增长身体并获得分数</li>
+                <li>⚡ 随着游戏进行，蛇的移动速度会逐渐加快</li>
+                <li>💥 撞到墙壁或自己身体游戏结束</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
